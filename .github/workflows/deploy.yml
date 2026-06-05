@@ -8,6 +8,7 @@ name: Deploy StarCadets to GitHub Pages
 on:
   push:
     branches: [main, master]
+    paths-ignore: ['**.md', 'BACKLOG.md', 'plan.md']
   workflow_dispatch:
 
 # Opt every JS action into Node 24 ahead of GitHub's 2026-06-16 forced cutover
