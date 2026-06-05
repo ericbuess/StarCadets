@@ -10,6 +10,11 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
+# Opt every JS action into Node 24 ahead of GitHub's 2026-06-16 forced cutover
+# (silences the Node 20 deprecation warnings; future-proofs the deploy).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 permissions:
   contents: read
   pages: write
